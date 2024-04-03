@@ -109,6 +109,7 @@
             новийToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.N;
             новийToolStripMenuItem.Size = new Size(180, 22);
             новийToolStripMenuItem.Text = "Новий";
+            новийToolStripMenuItem.Click += новийToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
@@ -134,6 +135,7 @@
             зберегтиToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.S;
             зберегтиToolStripMenuItem.Size = new Size(180, 22);
             зберегтиToolStripMenuItem.Text = "Зберегти";
+            зберегтиToolStripMenuItem.Click += зберегтиToolStripMenuItem_Click;
             // 
             // зберегтиЯкToolStripMenuItem
             // 
@@ -166,19 +168,19 @@
             // 
             пускToolStripMenuItem.Name = "пускToolStripMenuItem";
             пускToolStripMenuItem.ShortcutKeys = Keys.F9;
-            пускToolStripMenuItem.Size = new Size(180, 22);
+            пускToolStripMenuItem.Size = new Size(175, 22);
             пускToolStripMenuItem.Text = "Пуск";
             пускToolStripMenuItem.Click += bStart_Click;
             // 
             // toolStripSeparator4
             // 
             toolStripSeparator4.Name = "toolStripSeparator4";
-            toolStripSeparator4.Size = new Size(177, 6);
+            toolStripSeparator4.Size = new Size(172, 6);
             // 
             // проНакопичувачіToolStripMenuItem
             // 
             проНакопичувачіToolStripMenuItem.Name = "проНакопичувачіToolStripMenuItem";
-            проНакопичувачіToolStripMenuItem.Size = new Size(180, 22);
+            проНакопичувачіToolStripMenuItem.Size = new Size(175, 22);
             проНакопичувачіToolStripMenuItem.Text = "Про накопичувачі";
             проНакопичувачіToolStripMenuItem.Click += проНакопичувачіToolStripMenuItem_Click;
             // 
@@ -196,9 +198,16 @@
             проПрограмуToolStripMenuItem.Text = "Про програму";
             проПрограмуToolStripMenuItem.Click += проПрограмуToolStripMenuItem_Click;
             // 
+            // sfdSave
+            // 
+            sfdSave.DefaultExt = "BAK";
+            sfdSave.Filter = "C# Files|*.BAK|All files|*.*";
+            // 
             // ofdOpen
             // 
+            ofdOpen.DefaultExt = "BAK";
             ofdOpen.FileName = "openFileDialog1";
+            ofdOpen.Filter = "C# Files|*.BAK|All files|*.*";
             // 
             // Form1
             // 
@@ -212,6 +221,7 @@
             MainMenuStrip = menuStrip1;
             Name = "Form1";
             Text = "Form1";
+            FormClosing += Form1_FormClosing;
             FormClosed += Form1_FormClosed;
             Load += Form1_Load;
             menuStrip1.ResumeLayout(false);
