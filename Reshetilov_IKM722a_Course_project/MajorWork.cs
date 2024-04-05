@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Forms;
-
+using System.Collections;
 
 
 namespace Reshetilov_IKM722a_Course_project
@@ -17,6 +17,10 @@ namespace Reshetilov_IKM722a_Course_project
         public bool Modify;
         private string SaveFileName;// ім’я файлу для запису
         private string OpenFileName;// ім’я файлу для читання
+        public Stack myStack = new Stack();
+        public string[] myArr = new string[100];
+        public Queue myQueue = new Queue();
+        public string[] smyQueue = new string[100];
         public void WriteSaveFileName(string S)// метод запису даних в об'єкт
         {
             this.SaveFileName = S;// запам'ятати ім’я файлу для запису
