@@ -128,26 +128,22 @@ namespace Reshetilov_IKM722a_Course_project
 
                 while (S.Position < S.Length)
                 {
-                    while (S.Position < S.Length)
-                    {
-                        O = BF.Deserialize(S); // десеріалізація
-                        D = O as Buffer;
-                        if (D == null) break;
-                        System.Data.DataRow MR;
-                        MR = MT.NewRow();
-                        MR["Ключ"] = D.Key; // Занесення в таблицю номер
-                        MR["Вхідні дані"] = D.Data; // Занесення в таблицю вхідних даних
-                        MR["Результат"] = D.Result; // Занесення в таблицю результатів
-                        MT.Rows.Add(MR);
-                    }
-                    DG.DataSource = MT;
-                    S.Close(); // закриття
+                    O = BF.Deserialize(S); // десеріалізація
+                    D = O as Buffer;
+                    if (D == null) break;
+                    System.Data.DataRow MR;
+                    MR = MT.NewRow();
+                    MR["Ключ"] = D.Key; // Занесення в таблицю номер
+                    MR["Вхідні дані"] = D.Data; // Занесення в таблицю вхідних даних
+                    MR["Результат"] = D.Result; // Занесення в таблицю результатів
+                    MT.Rows.Add(MR);
                 }
+                DG.DataSource = MT;
+                S.Close(); // закриття
             }
             catch
             {
-                MessageBox.Show("Ошибка файла"); // Виведення на екран повідомлення "Помилка файлу"
-
+                MessageBox.Show("Помилка файлу"); // Виведення на екран повідомлення "Помилка файлу"
             }
             //ReadFromFile закінчився
         }
@@ -230,7 +226,7 @@ namespace Reshetilov_IKM722a_Course_project
                         if (D.Key == N) // перевірка дорівнює чи номер пошуку номеру рядка в таблиці
                         {
                             string ST;
-                            ST = "Запис містить:" + (char)13 + "№" + Num + "Вхідні дані:" + D.Data + "Результат:" + D.Result;
+                            ST = "Запис містить: " + (char)13 + "№" + Num + " Вхідні дані: " + D.Data + " Результат: " + D.Result;
                             MessageBox.Show(ST, "Запис знайдена"); // Виведення на екран повідомлення "запис містить", номер, вхідних даних і результат
                             S.Close();
                             return;
