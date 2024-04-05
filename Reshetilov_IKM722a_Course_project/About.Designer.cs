@@ -32,13 +32,15 @@
             label1 = new Label();
             button1 = new Button();
             tAbout = new System.Windows.Forms.Timer(components);
+            progressBar1 = new ProgressBar();
+            timer1 = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Arial", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label1.Location = new Point(258, 106);
+            label1.Font = new Font("Arial", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(195, 96);
             label1.Name = "label1";
             label1.Size = new Size(239, 168);
             label1.TabIndex = 0;
@@ -47,7 +49,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(337, 307);
+            button1.Location = new Point(278, 301);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 1;
@@ -60,11 +62,24 @@
             tAbout.Interval = 10000;
             tAbout.Tick += tAbout_Tick;
             // 
+            // progressBar1
+            // 
+            progressBar1.Location = new Point(129, 370);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(368, 24);
+            progressBar1.TabIndex = 2;
+            // 
+            // timer1
+            // 
+            timer1.Enabled = true;
+            timer1.Tick += timer1_Tick;
+            // 
             // About
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(627, 468);
+            Controls.Add(progressBar1);
             Controls.Add(button1);
             Controls.Add(label1);
             Name = "About";
@@ -79,5 +94,6 @@
         private Button button1;
         public System.Windows.Forms.Timer tAbout;
         private System.Windows.Forms.Timer timer1;
+        public ProgressBar progressBar1;
     }
 }
