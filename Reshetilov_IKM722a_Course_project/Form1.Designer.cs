@@ -47,6 +47,10 @@
             пускToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator4 = new ToolStripSeparator();
             проНакопичувачіToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator5 = new ToolStripSeparator();
+            текстовіФайлиToolStripMenuItem = new ToolStripMenuItem();
+            зберегтиToolStripMenuItem1 = new ToolStripMenuItem();
+            зберегтиЯкToolStripMenuItem1 = new ToolStripMenuItem();
             довідкаToolStripMenuItem = new ToolStripMenuItem();
             проПрограмуToolStripMenuItem = new ToolStripMenuItem();
             sfdSave = new SaveFileDialog();
@@ -73,6 +77,8 @@
             Dequeue = new Button();
             Enqueue = new Button();
             statusStrip1 = new StatusStrip();
+            richTextBox1 = new RichTextBox();
+            відкритиToolStripMenuItem1 = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgwOpen).BeginInit();
             tabControl1.SuspendLayout();
@@ -190,7 +196,7 @@
             // 
             // роботаToolStripMenuItem
             // 
-            роботаToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { пускToolStripMenuItem, toolStripSeparator4, проНакопичувачіToolStripMenuItem });
+            роботаToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { пускToolStripMenuItem, toolStripSeparator4, проНакопичувачіToolStripMenuItem, toolStripSeparator5, текстовіФайлиToolStripMenuItem });
             роботаToolStripMenuItem.Name = "роботаToolStripMenuItem";
             роботаToolStripMenuItem.Size = new Size(58, 20);
             роботаToolStripMenuItem.Text = "Робота";
@@ -199,21 +205,47 @@
             // 
             пускToolStripMenuItem.Name = "пускToolStripMenuItem";
             пускToolStripMenuItem.ShortcutKeys = Keys.F9;
-            пускToolStripMenuItem.Size = new Size(175, 22);
+            пускToolStripMenuItem.Size = new Size(180, 22);
             пускToolStripMenuItem.Text = "Пуск";
             пускToolStripMenuItem.Click += bStart_Click;
             // 
             // toolStripSeparator4
             // 
             toolStripSeparator4.Name = "toolStripSeparator4";
-            toolStripSeparator4.Size = new Size(172, 6);
+            toolStripSeparator4.Size = new Size(177, 6);
             // 
             // проНакопичувачіToolStripMenuItem
             // 
             проНакопичувачіToolStripMenuItem.Name = "проНакопичувачіToolStripMenuItem";
-            проНакопичувачіToolStripMenuItem.Size = new Size(175, 22);
+            проНакопичувачіToolStripMenuItem.Size = new Size(180, 22);
             проНакопичувачіToolStripMenuItem.Text = "Про накопичувачі";
             проНакопичувачіToolStripMenuItem.Click += проНакопичувачіToolStripMenuItem_Click;
+            // 
+            // toolStripSeparator5
+            // 
+            toolStripSeparator5.Name = "toolStripSeparator5";
+            toolStripSeparator5.Size = new Size(177, 6);
+            // 
+            // текстовіФайлиToolStripMenuItem
+            // 
+            текстовіФайлиToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { зберегтиToolStripMenuItem1, зберегтиЯкToolStripMenuItem1, відкритиToolStripMenuItem1 });
+            текстовіФайлиToolStripMenuItem.Name = "текстовіФайлиToolStripMenuItem";
+            текстовіФайлиToolStripMenuItem.Size = new Size(180, 22);
+            текстовіФайлиToolStripMenuItem.Text = "Текстові файли";
+            // 
+            // зберегтиToolStripMenuItem1
+            // 
+            зберегтиToolStripMenuItem1.Name = "зберегтиToolStripMenuItem1";
+            зберегтиToolStripMenuItem1.Size = new Size(180, 22);
+            зберегтиToolStripMenuItem1.Text = "Зберегти";
+            зберегтиToolStripMenuItem1.Click += зберегтиToolStripMenuItem1_Click;
+            // 
+            // зберегтиЯкToolStripMenuItem1
+            // 
+            зберегтиЯкToolStripMenuItem1.Name = "зберегтиЯкToolStripMenuItem1";
+            зберегтиЯкToolStripMenuItem1.Size = new Size(180, 22);
+            зберегтиЯкToolStripMenuItem1.Text = "Зберегти як";
+            зберегтиЯкToolStripMenuItem1.Click += зберегтиЯкToolStripMenuItem1_Click;
             // 
             // довідкаToolStripMenuItem
             // 
@@ -292,6 +324,7 @@
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(richTextBox1);
             tabPage2.Controls.Add(dgwOpen);
             tabPage2.Controls.Add(tbSearch);
             tabPage2.Controls.Add(bSearch);
@@ -463,6 +496,21 @@
             statusStrip1.TabIndex = 9;
             statusStrip1.Text = "statusStrip1";
             // 
+            // richTextBox1
+            // 
+            richTextBox1.Location = new Point(693, 265);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(233, 180);
+            richTextBox1.TabIndex = 8;
+            richTextBox1.Text = "";
+            // 
+            // відкритиToolStripMenuItem1
+            // 
+            відкритиToolStripMenuItem1.Name = "відкритиToolStripMenuItem1";
+            відкритиToolStripMenuItem1.Size = new Size(180, 22);
+            відкритиToolStripMenuItem1.Text = "Відкрити";
+            відкритиToolStripMenuItem1.Click += відкритиToolStripMenuItem1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -542,5 +590,11 @@
         private Button Peek_q;
         private Button Dequeue;
         private Button Enqueue;
+        private ToolStripSeparator toolStripSeparator5;
+        private ToolStripMenuItem текстовіФайлиToolStripMenuItem;
+        private ToolStripMenuItem зберегтиToolStripMenuItem1;
+        private ToolStripMenuItem зберегтиЯкToolStripMenuItem1;
+        private ToolStripMenuItem відкритиToolStripMenuItem1;
+        private RichTextBox richTextBox1;
     }
 }
